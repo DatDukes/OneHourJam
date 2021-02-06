@@ -30,7 +30,7 @@ public class BezierEnemy : MonoBehaviour
 
         if(timer > FireRate) 
         {
-            Fire();
+            StartCoroutine(Salve());
             timer = 0;
         }
     }
@@ -51,6 +51,6 @@ public class BezierEnemy : MonoBehaviour
         GameObject go = Instantiate(projectile);
         Vector3 target = transform.position;
         go.transform.position = transform.position;
-        go.transform.DOMove(target + Vector3.down * 10, 3.0f).onComplete = () => Destroy(go);
+        go.transform.DOMove(target + Vector3.down * 20, 5.0f).onComplete = () => Destroy(go);
     }
 }

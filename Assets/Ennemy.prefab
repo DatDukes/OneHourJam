@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: []
-  PathDuration: 3
+  PathDuration: 5
   DoIShoot: 1
   FireRate: 1
   projectileParSalve: 5
