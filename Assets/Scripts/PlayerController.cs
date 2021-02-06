@@ -7,9 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     public float maxHp;
     public float speed;
+    public float firingSpeed;
 
     private float hp;
+    private float currentFireCD;
 
+    public GameObject projectile;
     public Slider[] sliders;
 
     public int deathCount;
@@ -80,6 +83,14 @@ public class PlayerController : MonoBehaviour
         {
             this.transform.position = this.transform.position + -this.transform.up * speed * Time.deltaTime;
         }
+
+        if (Input.GetButton("Fire1") && currentFireCD > firingSpeed)
+        {
+            currentFireCD = 0;
+            Instantiate(projectile, this.transform.position, Quaternion.identity);
+        }
+
+        currentFireCD += Time.deltaTime;
     }
 
     public void LowerHpBy(float value)
