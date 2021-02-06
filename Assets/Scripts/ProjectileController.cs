@@ -20,11 +20,10 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
-
-        if(other.tag == "enemy")
+        if(other.tag == "ennemy")
         {
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

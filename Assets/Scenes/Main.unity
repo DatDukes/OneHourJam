@@ -3335,7 +3335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 5
   speed: 8
-  firingSpeed: 0.5
+  firingSpeed: 0.1
   safeTime: 0.5
   projectile: {fileID: 6631768761797313454, guid: 9d057a1802647b246901106553449a6e,
     type: 3}

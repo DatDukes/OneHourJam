@@ -86,11 +86,11 @@ public class PlayerController : MonoBehaviour
             this.transform.position = this.transform.position + -this.transform.up * speed * Time.deltaTime;
         }
 
-        if (Input.GetButton("Fire1") && currentFireCD > firingSpeed)
-        {
-            currentFireCD = 0;
-            Instantiate(projectile, this.transform.position, Quaternion.identity);
-        }
+        //if (Input.GetButton("Fire1") && currentFireCD > firingSpeed)
+        //{
+        //    currentFireCD = 0;
+        //    Instantiate(projectile, this.transform.position, Quaternion.identity);
+        //}
 
         currentFireCD += Time.deltaTime;
         curentSafeTime += Time.deltaTime;
