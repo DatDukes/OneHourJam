@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     public float maxHp;
     public float speed;
     public float firingSpeed;
+    public float safeTime;
 
     private float hp;
     private float currentFireCD;
+    private float curentSafeTime;
 
     public GameObject projectile;
     public Slider[] sliders;
@@ -91,6 +93,7 @@ public class PlayerController : MonoBehaviour
         }
 
         currentFireCD += Time.deltaTime;
+        curentSafeTime += Time.deltaTime;
     }
 
     public void LowerHpBy(float value)
@@ -106,9 +109,10 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "ennemy")
+        if (other.tag == "ennemy" && curentSafeTime > safeTime)
         {
             //Destroy(other.transform.parent.gameObject);
+            curentSafeTime = 0;
             LowerHpBy(1);
         }
     }
