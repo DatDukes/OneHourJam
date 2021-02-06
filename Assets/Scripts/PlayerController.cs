@@ -102,4 +102,14 @@ public class PlayerController : MonoBehaviour
             i.value = (hp * 100 / maxHp ) /100;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "ennemy")
+        {
+            //Destroy(other.transform.parent.gameObject);
+            LowerHpBy(1);
+        }
+    }
 }
