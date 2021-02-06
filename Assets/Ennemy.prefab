@@ -49,7 +49,7 @@ MonoBehaviour:
   PathDuration: 5
   DoIShoot: 1
   FireRate: 1
-  projectileParSalve: 5
+  projectileParSalve: 3
   projectile: {fileID: 8823896982517754794, guid: 84886131c06c1f448b5f88307f873846,
     type: 3}
 --- !u!1 &1973333843053748955
