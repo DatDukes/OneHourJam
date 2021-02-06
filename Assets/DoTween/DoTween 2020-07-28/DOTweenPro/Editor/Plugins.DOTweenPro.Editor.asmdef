@@ -1,0 +1,12 @@
+{
+	"name": "Plugins.DOTweenPro.Editor",
+	"references": [
+		"Plugins.DOTween.Modules",
+		"Plugins.DOTweenPro",
+		"Unity.TextMeshPro"
+	],
+	"includePlatforms": [
+		"Editor"
+	],
+	"autoReferenced": false
+}
