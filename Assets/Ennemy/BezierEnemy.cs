@@ -21,6 +21,7 @@ public class BezierEnemy : MonoBehaviour
     {
         path = Path.Select(p => p.transform.position).ToArray();
         transform.DOPath(path, PathDuration, PathType.CubicBezier).onComplete = () => Destroy(gameObject);
+        timer = Random.Range(0, FireRate);
     }
 
     void Update()
@@ -50,6 +51,6 @@ public class BezierEnemy : MonoBehaviour
         GameObject go = Instantiate(projectile);
         Vector3 target = transform.position;
         go.transform.position = transform.position;
-        go.transform.DOMove(target - Vector3.down * 10, 3.0f).onComplete = () => Destroy(go);
+        go.transform.DOMove(target + Vector3.down * 10, 3.0f).onComplete = () => Destroy(go);
     }
 }
